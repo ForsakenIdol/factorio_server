@@ -10,6 +10,8 @@ echo "Teardown called.";
 # Currently, there are no such backups we need to perform.
 echo "Removing the test save zip...";
 rm -rf factorio/saves;
+echo "Removing the server settings...";
+rm factorio/server-settings.json;
 echo "Removing the unzipped Factorio server files...";
 rm -rf factorio/factorio;
 
