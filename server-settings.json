@@ -14,6 +14,9 @@
     "lan": true
   },
 
+  "_comment_auto_pause": "Whether should the server be paused when no players are present.",
+  "auto_pause": true,
+
   "game_password": "aserver",
 
   "_comment_require_user_verification": "When set to true, the server will only allow clients that have a valid Factorio.com account",
