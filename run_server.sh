@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Run this script from the same directory as the setup and teardown scripts.
-./factorio/factorio/bin/x64/factorio --start-server ./saves/test-save.zip --server-settings ./server-settings.json
+./factorio/factorio/bin/x64/factorio --start-server ./saves/a_world.zip --server-settings ./server-settings.json
 
 # We can run this in the background with a Linux "screen".
 # `screen -S <screen_name>` creates a screen with the name "screen_name".
