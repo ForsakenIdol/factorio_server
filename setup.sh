@@ -25,6 +25,4 @@ echo "Server unpacked. Ready to start headless server instance.";
 # ./factorio/factorio/bin/x64/factorio --create ./saves/test-save.zip
 
 # Save file has been created, all that is left to do is to start the server.
-# The command to do so, from this directory containing the setup script, is as follows:
-# ./factorio/factorio/bin/x64/factorio --start-server ./saves/test-save.zip --server-settings ./server-settings.json
 
