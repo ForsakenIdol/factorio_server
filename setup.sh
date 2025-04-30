@@ -2,7 +2,9 @@
 
 # Environment Variables
 SERVER_VERSION=2.0.32
-FACTORIO_MODS_ZIP="https://cdn.discordapp.com/attachments/427068629486534667/1366410416057618564/factorio_mods.zip?ex=6810d85d&is=680f86dd&hm=777e92924a7a367050e37c7153f1f5d19dbad28f40eadcce48d5769bff8ef1b4&"
+FACTORIO_BUCKET_URI=s3://forsakenidol
+FACTORIO_MODS_ZIP_NAME=factorio_mods.zip
+FACTORIO_MODS_S3_URI=$FACTORIO_BUCKET_URI/$FACTORIO_MODS_ZIP_NAME
 
 FACTORIO_ZIP_NAME=factorio-server-headless.tar.xz
 FACTORIO_SERVER_DOWNLOAD=https://www.factorio.com/get-download/{$SERVER_VERSION}/headless/linux64
@@ -40,9 +42,11 @@ kill $FACTORIO_PID;
 
 # First, download the mods as a zip.
 echo "Downloading mod zip...";
-curl $FACTORIO_MODS_ZIP --output factorio_mods.zip;
+# If the EC2 instance has an IAM role that allows access to S3, we can download the mods from S3 instead.
+echo "Downloading mod zip from S3. URI of mod zip: $FACTORIO_MODS_S3_URI...";
+aws s3 cp $FACTORIO_MODS_S3_URI .
 echo "Mod zip downloaded, unzipping...";
-unzip -o ./factorio_mods.zip -d ./factorio/factorio/mods/;
+unzip -o ./$FACTORIO_MODS_ZIP_NAME -d ./factorio/factorio/mods/;
 echo "Mod loading complete. Mod zip no-longer required; deleting mod zip...";
 rm -rf factorio_mods.zip;
 
