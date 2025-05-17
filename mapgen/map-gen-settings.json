@@ -11,14 +11,14 @@
       "richness": 1
     },
     "coal": {
-      "frequency": 1,
+      "frequency": 2,
       "size": 1,
-      "richness": 1
+      "richness": 0.75
     },
     "copper-ore": {
-      "frequency": 1,
+      "frequency": 2,
       "size": 1,
-      "richness": 1.5
+      "richness": 0.75
     },
     "crude-oil": {
       "frequency": 1,
@@ -71,9 +71,9 @@
       "richness": 1
     },
     "iron-ore": {
-      "frequency": 1,
+      "frequency": 2,
       "size": 1,
-      "richness": 1.5
+      "richness": 0.75
     },
     "lithium_brine": {
       "frequency": 1,
@@ -160,7 +160,7 @@
       "y": -32767
     }
   },
-  "starting_area": 1.3333333730697632,
+  "starting_area": 5,
   "peaceful_mode": false,
   "starting_points": [
     {
