@@ -20,5 +20,8 @@
   "game_password": "aserver",
 
   "_comment_require_user_verification": "When set to true, the server will only allow clients that have a valid Factorio.com account",
-  "require_user_verification": false
+  "require_user_verification": false,
+
+  "_comment_autosave_interval": "Autosave interval in minutes",
+  "autosave_interval": 30
 }
